@@ -1,4 +1,4 @@
-# UIUX.md: Sutra.AI Design System
+# UIUX.md: LearnSync Design System
 
 ## 1. Design Philosophy
 **Theme:** "The Flow State".

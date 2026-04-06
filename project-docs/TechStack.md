@@ -1,4 +1,4 @@
-# TechStack.md: Sutra.AI
+# TechStack.md: LearnSync
 
 ## 1. Frontend Architecture
 * **Framework**: Next.js 14+ (App Router)

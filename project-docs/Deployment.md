@@ -1,7 +1,7 @@
-# Deployment.md: Sutra.AI Deployment & Demo Strategy
+# Deployment.md: LearnSync Deployment & Demo Strategy
 
 ## 1. Overview
-[cite_start]This document defines the deployment pipeline and high-availability strategy for the Sutra.AI MVP. To ensure maximum judge engagement, the project prioritizes a live web-accessible URL over a strictly local setup.
+[cite_start]This document defines the deployment pipeline and high-availability strategy for the LearnSync MVP. To ensure maximum judge engagement, the project prioritizes a live web-accessible URL over a strictly local setup.
 
 ---
 
@@ -27,7 +27,7 @@
 ---
 
 ## 5. Local Development & One-Command Run
-To run Sutra.AI locally as a primary or fallback demo source:
+To run LearnSync locally as a primary or fallback demo source:
 1. **Install:** `npm install`.
 2. [cite_start]**Configure:** Create a local `.env` file with necessary keys[cite: 87].
 3. **Execute:** `npm run dev`.

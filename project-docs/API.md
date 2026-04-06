@@ -1,7 +1,7 @@
-# API.md: Sutra.AI Specification
+# API.md: LearnSync Specification
 
 ## 1. Overview
-This document defines the RESTful API endpoints for the Sutra.AI platform. [cite_start]To ensure an 8-hour delivery, all endpoints are implemented as **Next.js Route Handlers** using a **Node.js + Express-style** structure [cite: 77-78].
+This document defines the RESTful API endpoints for the LearnSync platform. [cite_start]To ensure an 8-hour delivery, all endpoints are implemented as **Next.js Route Handlers** using a **Node.js + Express-style** structure [cite: 77-78].
 
 **Base URL:** `/api`
 

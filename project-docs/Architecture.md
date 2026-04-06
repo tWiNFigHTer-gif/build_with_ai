@@ -1,7 +1,7 @@
-# Architecture.md: Sutra.AI System Design
+# Architecture.md: LearnSync System Design
 
 ## 1. High-Level System Overview
-[cite_start]Sutra.AI follows a **Serverless Full-Stack Architecture** to minimize infrastructure management and maximize development speed[cite: 95, 99]. The system is composed of a unified Next.js environment that handles both the user interface and the intelligence-driven backend logic.
+[cite_start]LearnSync follows a **Serverless Full-Stack Architecture** to minimize infrastructure management and maximize development speed[cite: 95, 99]. The system is composed of a unified Next.js environment that handles both the user interface and the intelligence-driven backend logic.
 
 
 

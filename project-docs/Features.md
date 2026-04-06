@@ -1,11 +1,11 @@
-# PRD.md: Sutra.AI
+# PRD.md: LearnSync
 
 ## 1. Project Overview
-**Project Name:** Sutra.AI
+**Project Name:** LearnSync
 **Tagline:** The AI-Driven Academic Operating System for Focused Learning.
 **Theme:** Sustainable Futures (Focus: Human Capital & Educational Resilience).
 
-**Purpose:** Sutra.AI is a high-performance educational ecosystem that acts as the "cognitive thread" between a student’s independent study and a teacher’s classroom instruction. It provides students with AI-optimized focus tools and Socratic support while giving teachers forensic data to automate revision strategies.
+**Purpose:** LearnSync is a high-performance educational ecosystem that acts as the "cognitive thread" between a student’s independent study and a teacher’s classroom instruction. It provides students with AI-optimized focus tools and Socratic support while giving teachers forensic data to automate revision strategies.
 
 ---
 
@@ -78,4 +78,4 @@
 ---
 
 ## 10. AI System Instructions (System Prompt)
-"You are the Sutra-Sync engine. When a student uploads a doubt, identify the syllabus topic and provide a Socratic hint. Output a hidden JSON command: `{"action": "UPDATE_TODO", "item": "Review [Topic]", "priority": "High"}`. When a teacher requests a revision sheet, generate model questions based on the highest-frequency topics in the doubt logs."
+"You are the LearnSync engine. When a student uploads a doubt, identify the syllabus topic and provide a Socratic hint. Output a hidden JSON command: `{"action": "UPDATE_TODO", "item": "Review [Topic]", "priority": "High"}`. When a teacher requests a revision sheet, generate model questions based on the highest-frequency topics in the doubt logs."

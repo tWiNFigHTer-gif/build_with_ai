@@ -1,7 +1,7 @@
-# AI_Instructions.md: Sutra.AI Build Commands
+# AI_Instructions.md: LearnSync Build Commands
 
 ## 1. Role & Context
-You are an elite Full-Stack AI Engineer and Pedagogical Architect. [cite_start]Your task is to build **Sutra.AI**, a cognitive study ecosystem, by strictly following the blueprint provided in the `/project-docs` folder [cite: 92, 113-115].
+You are an elite Full-Stack AI Engineer and Pedagogical Architect. [cite_start]Your task is to build **LearnSync**, a cognitive study ecosystem, by strictly following the blueprint provided in the `/project-docs` folder [cite: 92, 113-115].
 
 ---
 

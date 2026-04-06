@@ -1,7 +1,7 @@
-# Security.md: Sutra.AI Security & Data Governance
+# Security.md: LearnSync Security & Data Governance
 
 ## 1. Overview
-This document outlines the security protocols for the Sutra.AI MVP. Given the 8-hour hackathon constraint, the focus is on protecting API credentials, validating student inputs, and ensuring AI safety while utilizing a simplified authentication model.
+This document outlines the security protocols for the LearnSync MVP. Given the 8-hour hackathon constraint, the focus is on protecting API credentials, validating student inputs, and ensuring AI safety while utilizing a simplified authentication model.
 
 ---
 

@@ -1,7 +1,7 @@
-# Database.md: Sutra.AI Schema (Firestore)
+# Database.md: LearnSync Schema (Firestore)
 
 ## 1. Overview
-**Sutra.AI** utilizes **Firebase Firestore** as its primary NoSQL database and **Firebase Realtime Database** for live telemetry. This architecture ensures 8-hour feasibility by removing the need for a custom backend server.
+**LearnSync** utilizes **Firebase Firestore** as its primary NoSQL database and **Firebase Realtime Database** for live telemetry. This architecture ensures 8-hour feasibility by removing the need for a custom backend server.
 
 ---
 
