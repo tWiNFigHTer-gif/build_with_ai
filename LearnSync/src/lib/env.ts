@@ -8,9 +8,15 @@ function readEnv(name: string): string | null {
   return trimmed.length > 0 ? trimmed : null;
 }
 
-export function getModelProvider(): "mock" | "vertex" {
+export function getModelProvider(): "mock" | "vertex" | "gemini" {
   const provider = readEnv("MODEL_PROVIDER")?.toLowerCase();
-  return provider === "vertex" ? "vertex" : "mock";
+  if (provider === "vertex") return "vertex";
+  if (readEnv("GEMINI_API_KEY")) return "gemini";
+  return "mock";
+}
+
+export function getGeminiApiKey(): string | null {
+  return readEnv("GEMINI_API_KEY");
 }
 
 export function getVertexConfig() {

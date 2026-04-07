@@ -50,7 +50,16 @@ export function KnowledgeBase({ syllabusFileUri, onSyllabusFileUri, className }:
 				});
 
 				if (!response.ok) {
-					throw new Error("Failed to upload teacher syllabus context");
+					let message = "Failed to upload teacher syllabus context";
+					try {
+						const errorPayload = (await response.json()) as { error?: string };
+						if (errorPayload?.error) {
+							message = errorPayload.error;
+						}
+					} catch {
+						// Keep default message when error response is not JSON.
+					}
+					throw new Error(message);
 				}
 
 				const payload = (await response.json()) as UploadContextResponse;

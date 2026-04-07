@@ -18,10 +18,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Message is required" }, { status: 400 });
   }
 
-  if (!body.syllabusUri?.trim()) {
-    return NextResponse.json({ error: "Syllabus URI is required" }, { status: 400 });
-  }
-
   try {
     const response = await generateChatReply({
       message: body.message.trim(),

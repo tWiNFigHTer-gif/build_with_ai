@@ -1,5 +1,21 @@
 import { NextResponse } from "next/server";
 
+const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
+const ALLOWED_MIME_TYPES = new Set([
+  "application/pdf",
+  "application/x-pdf",
+  "application/octet-stream",
+  "text/plain",
+  "text/markdown"
+]);
+
+function isAllowedUpload(file: File): boolean {
+  const lowerName = file.name.toLowerCase();
+  const extensionAllowed = lowerName.endsWith(".pdf") || lowerName.endsWith(".txt") || lowerName.endsWith(".md");
+  const mimeAllowed = !file.type || ALLOWED_MIME_TYPES.has(file.type.toLowerCase());
+  return extensionAllowed && mimeAllowed;
+}
+
 export async function POST(request: Request) {
   let formData: FormData;
   try {
@@ -13,9 +29,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "No file received" }, { status: 400 });
   }
 
-  const allowedTypes = new Set(["application/pdf", "text/plain", "text/markdown"]);
-  if (file.type && !allowedTypes.has(file.type)) {
-    return NextResponse.json({ error: "Unsupported file type" }, { status: 400 });
+  if (file.size > MAX_UPLOAD_BYTES) {
+    return NextResponse.json({ error: "File too large. Max allowed size is 10MB." }, { status: 400 });
+  }
+
+  if (!isAllowedUpload(file)) {
+    return NextResponse.json(
+      { error: "Unsupported file type. Upload PDF, TXT, or MD files only." },
+      { status: 400 }
+    );
   }
 
   const safeName = file.name.replace(/\s+/g, "-").toLowerCase();

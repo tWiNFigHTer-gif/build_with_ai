@@ -66,11 +66,6 @@ export function StudyHUD() {
 			return;
 		}
 
-		if (!syllabusFileUri) {
-			setChatError("Teacher must upload syllabus context first.");
-			return;
-		}
-
 		setChatError(null);
 		setIsChatLoading(true);
 		setChatInput("");
@@ -84,12 +79,13 @@ export function StudyHUD() {
 				},
 				body: JSON.stringify({
 					message,
-					syllabusUri: syllabusFileUri
+					syllabusUri: syllabusFileUri ?? ""
 				})
 			});
 
 			if (!response.ok) {
-				throw new Error("Chat request failed");
+				const errData = (await response.json().catch(() => ({}))) as { error?: string };
+				throw new Error(errData.error ?? "Chat request failed");
 			}
 
 			const payload = (await response.json()) as ChatResponse;
@@ -250,9 +246,14 @@ export function StudyHUD() {
 					<CardDescription>Text doubts grounded to the syllabus your teacher uploaded.</CardDescription>
 				</CardHeader>
 				<CardContent className="space-y-4">
+					{!syllabusFileUri ? (
+						<p className="rounded-lg border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-200">
+							⚠ No syllabus uploaded by teacher yet — replies will be general, not syllabus-grounded.
+						</p>
+					) : null}
 					<div className="max-h-64 space-y-3 overflow-y-auto rounded-xl border border-white/10 bg-black/40 p-4">
 						{chatMessages.length === 0 ? (
-							<p className="text-sm text-zinc-500">No messages yet. Ask anything aligned to your PDF context.</p>
+							<p className="text-sm text-zinc-500">No messages yet. Ask anything — or upload a syllabus for grounded answers.</p>
 						) : null}
 						{chatMessages.map((message, index) => (
 							<div
